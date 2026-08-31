@@ -1,0 +1,72 @@
+/* CV Item */
+.cv-item{
+  margin-bottom: 1.25rem;
+}
+
+.cv-item ul {
+  margin-top: 0;
+  margin-left: 0;
+  padding-left: 1.2rem;
+  line-height: 1rem;
+}
+
+.cv-item li {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+  line-height: 1rem;
+}
+
+/* Flex container to separate title (left) and date (right) */
+.cv-item h3 {
+  display: flex;
+  justify-content: space-between; /* Pushes title to left, date to right */
+  align-items: baseline;          /* Aligns text baselines perfectly */
+  font-size: 1rem;
+  font-weight: 550;
+  color: #262125;
+  margin-top: 0;
+  margin-bottom: 0rem;
+}
+
+/* Date styling */
+.cv-date {
+  font-size: 1rem;
+  font-weight: 400;     /* Keeps date lighter than the bold h3 title */
+  color: #655e63;       /* Matches secondary text palette */
+  white-space: nowrap;  /* Prevents date from wrapping onto a second line */
+  margin-left: 1rem;
+}
+
+/* Ensures cv-item paragraphs match the compact line height */
+.cv-item p {
+  margin-left: 0.5rem;
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* Section label matching .cv-date font styling */
+.date-label {
+  font-size: 1rem;
+  font-weight: 400;     /* Light/normal weight */
+  color: #655e63;       /* Matches secondary muted text palette */
+  white-space: nowrap;
+  padding-left: 1.5rem;
+}
+
+#education .cv-item{
+  margin-bottom: 0;
+}
+
+#employment .cv-item{
+  margin-bottom: 0;
+}
+
+#presentations .cv-item{
+  margin-bottom: 0;
+}
+
+#awards .cv-item{
+  margin-bottom: 0;
+}

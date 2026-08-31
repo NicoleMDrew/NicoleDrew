@@ -5,50 +5,349 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nicole Drew, Computational and Theoretical Physicist - CV</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style_CV.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="page-cv">
   <div class="container">
     
-    <header>
-      <h1>Nicole Drew, Ph.D.</h1>
-      <p class="subtitle">Computational and Theoretical Physicist</p>
-    </header>
+    <div class="left-fixed" id="leftPanel"></div>
 
-    <section id="education">
-      <h2>Education</h2>
-      
-      <div class="project-item">
-        <h3>Pennsylvania State University</h3>
-        <p>Ph.D. Physics</p>
-        <p>Dissertation Title: "The Minimum Energy Surface: Where It Exists, How to Find It, and When to Use It"</p>
-      </div>
+    <div class="right-content">
 
-      <div class="project-item">
-        <h3>University of South Florida</h3>
-        <p>B.S. Physics</p>
-        <p>B.A. Mathematics (honors)</p>
-      </div>
-    </section>
+      <section id="education">
+        <h2>
+          <span>Education</span>
+          <span class="date-label">Dates</span>
+        </h2>
 
-    <section id="research">
-      <h2>Research Experience</h2>
-      
-      <div class="project-item">
-        <h3>Nudged Elastic Membranes</h3>
-        <p>A brief description of your project, key techniques used, or findings.</p>
-      </div>
+        <div class="cv-item">
+          <h3>
+            <span>Physics Ph.D.</span>
+            <span class="cv-date">8/26</span>
+          </h3>
+          <p>Pennsylvania State University
+          <br>Dissertation: <a href="https://etda.libraries.psu.edu/catalog/19458njh5456" target="_blank" class="cv-link"><i>The Minimum Energy Surface: Where It Exists, How to Find It, and When to Use It</i><img src="assets/open-link.svg" class="link-icon">
+          </a>
+          </p>
+        </div>
 
-      <div class="project-item">
-        <h3>Project Title 2</h3>
-        <p>A brief description of another project or publication link.</p>
-      </div>
-    </section>
+        <div class="cv-item">
+          <h3>
+            <span>Physics B.S., <i>cum laude</i></span>
+            <span class="cv-date">5/17</span>
+          </h3>
+          <p>University of South Florida</p>
+        </div>
 
+        <div class="cv-item">
+          <h3>
+            <span>Mathematics (Honors) B.A., <i>cum laude</i></span>
+            <span class="cv-date">5/17</span>
+          </h3>
+          <p>University of South Florida 
+          <br>Thesis: <i>Polynomials, Stars, and the Lima&#231;on</i></p>
+        </div>
+      </section>
 
-    <footer>
-      <p>&copy; 2026 Nicole Drew</p>
-    </footer>
+      <section id="research">
+        <h2>
+          <span>Research Experience</span>
+          <span class="date-label">Dates</span>
+        </h2>
+        
+        <div class="cv-item">
+          <h3>
+            <span>Computational Algorithm Development for Energy Materials</span>
+            <span class="cv-date">6/24-8/26</span>
+          </h3>
+          <p>Pennsylvania State University, Department of Physics</p>
+          <ul>
+            <li>Constructed novel proof of the existence of two-dimensional minimum energy surfaces, demonstrating that the problem is well-posed, with unique solutions.</li>
+            <li>Derived and constructed a novel nudged elastic membrane (NEM) algorithm in python, NEMpy, for approximating minimum energy surfaces of systems with many degrees of freedom. Modeled as an extension of the nudged elastic band (NEB) technique with finite elastic elements. Demonstrated compatibility with Quantum ESPRESSO and machine learning potentials.</li>
+            <li>Estimated energies of adsorbates on surfaces of novel materials at vacuum interfaces using Quantum ESPRESSO. Systems modeled using ASE and PyMatGen; data analyzed with pandas and NumPy. Created bash scripts to automate input file generation and extract output data.</li>
+          </ul>
+        </div>
+
+        <div class="cv-item">
+          <h3>
+            <span>Euclideanization of Minkowski Spacetime</span>
+            <span class="cv-date">12/22-6/24</span>
+          </h3>
+          <p>Pennsylvania State University, Department of Physics</p>
+          <ul>
+            <li>Constructed a novel transformation from the hyperbolic geometry of special relativity to Euclidean space. Useful for computing integrals in quantum field theory.</li>
+          </ul>
+        </div>
+
+        <div class="cv-item">
+          <h3>
+            <span>Quasi-classical Models of Quantum Dynamics</span>
+            <span class="cv-date">8/19-5/23</span>
+          </h3>
+          <p>Pennsylvania State University, Department of Physics</p>
+          <ul>
+            <li>Estimated tunneling times in quantum double-well potentials via a newly published quasi-classical model of quantum dynamics, based on moments of operators.</li>
+            <li>Derived a novel mapping from expectation values of operators obeying the su(3) lie algebra to canonical coordinates based on Poisson brackets.</li>
+          </ul>
+        </div>
+
+        <div class="cv-item">
+          <h3>
+            <span>Complex Formulation of Gravitational Lensing</span>
+            <span class="cv-date">5/14-5/17</span>
+          </h3>
+          <p>University of South Florida, Department of Mathematics &amp; Statistics</p>
+          <ul>
+            <li>Found classes of solutions for locations of images formed by gravitational lenses of a particular geometry.</li>
+            <li>Created lensing simulations to explore a broader range of system parameters than could be handled analytically.</li>
+          </ul>
+        </div>
+
+        <div class="cv-item">
+          <h3>
+            <span>RoboBulls: Soccer-Playing Robots</span>
+            <span class="cv-date">1/14-12/16</span>
+          </h3>
+          <p>University of South Florida, Student Organization</p>
+          <ul>
+            <li>Derived kinematic corrections for an omni-wheel drive system with an intrinsic asymmetry. Implemented corrections into control system using C++.</li>
+            <li>Modeled solenoid-based robotic kicking mechanism using Maxwell theory, for the prediction of kick velocity as a function of capacitor discharge time.</li>
+          </ul>
+        </div>
+
+      </section>
+
+      <section id="publications">
+        <h2>
+          <span>Publications &amp; Manuscripts</span>
+          <span class="date-label">Dates</span>
+        </h2>
+        
+        <div class="cv-item">
+          <h3>
+            <span><code>NEMPy</code>: A Python Package for Approximating Minimum Energy Surfaces from Nudged Elastic Membranes</span>
+            <span class="cv-date">est. 10/26</span>
+          </h3>
+          <p>Authors: <b>N. Drew</b>, U.S. Manoj, L. Muechler, I. Dabo 
+          <br>Preparing submission to <i>Computer Physics Communications</i></p>
+        </div>
+
+        <div class="cv-item">
+          <h3>
+            <span>Topologically Unique Minimum Energy Surfaces</span>
+            <span class="cv-date">est. 9/26</span>
+          </h3>
+          <p>Authors: <b>N. Drew</b>, I. Dabo 
+          <br>Preparing submission to <i>Journal of Mathematical Physics</i></p>
+        </div>
+
+        <div class="cv-item">
+          <h3>
+            <span>Nudged Elastic Membranes for Constructing Reduced Two-Dimensional Potential Energy Surfaces</span>
+            <span class="cv-date">6/26</span>
+          </h3>
+          <p>Authors: U.S. Manoj, <b>N. Drew</b>, I. Dabo, L. Muechler 
+          <br>Under review by <i>Journal of Chemical Physics</i> 
+          <br>doi:<a href="https://doi.org/10.48550/arXiv.2604.19964" target="_blank">10.48550/arXiv.2604.19964<img src="assets/open-link.svg" class="link-icon"></a></p>
+        </div>
+
+        <div class="cv-item">
+          <h3>
+            <span>Euclideanization without Complexification of the Spacetime</span>
+            <span class="cv-date">2/26</span>
+          </h3>
+          <p>Authors: <b>N. Drew</b>, V. Gopalan, M. Bojowald 
+          <br>Under review by <i>Journal of Mathematical Physics</i> 
+          <br>doi:<a href="https://doi.org/10.48550/arXiv.2503.04654" target="_blank">10.48550/arXiv.2503.04654<img src="assets/open-link.svg" class="link-icon"></a></p>
+        </div>
+
+        <div class="cv-item">
+          <h3>
+            <span>A survey on the maximal number of solutions of equations related to gravitational lensing</span>
+            <span class="cv-date">1/18</span>
+          </h3>
+          <p>Authors: C. Beneteau, <b>N. Hudson Drew</b> 
+          <br>Birkhauser, <i>Complex Analysis and Dynamical Systems: New Trends &amp; Open Problems</i>, Chapter 2. 
+          <br>doi:<a href="https://doi.org/10.1007/978-3-319-70154-7_2" target="_blank">10.1007/978-3-319-70154-7_2<img src="assets/open-link.svg" class="link-icon"></a></p>
+        </div>
+
+      </section>
+
+      <section id="presentations">
+        <h2>
+          <span>Selected Presentations</span>
+          <span class="date-label">Dates</span>
+        </h2>
+        
+        <div class="cv-item">
+          <h3>
+            <span>Euclideanization of Minkowski Spacetime via Conic Projection</span>
+            <span class="cv-date">3/25</span>
+          </h3>
+          <p>APS Global Physics Summit 2025</p>
+        </div>
+
+        <div class="cv-item">
+          <h3>
+            <span>Quantum Dynamics in Double-Well Potentials Using Quasi-classical Techniques</span>
+            <span class="cv-date">3/23</span>
+          </h3>
+          <p>APS March Meeting 2023</p>
+        </div>
+
+        <div class="cv-item">
+          <h3>
+            <span>Representation Theory &amp; the Weyl Equation</span>
+            <span class="cv-date">6/18</span>
+          </h3>
+          <p>AMS MRC: The Mathematics of Gravity and Light</p>
+        </div>
+
+        <div class="cv-item">
+          <h3>
+            <span>Polynomials, Stars, and the Lima&#231;on</span>
+            <span class="cv-date">12/16</span>
+          </h3>
+          <p>Mathematical Association of America, Suncoast Regional Conference</p>
+        </div>
+
+        <div class="cv-item">
+          <h3>
+            <span>Kinematics of an Asymmetric Omni-drive Chassis</span>
+            <span class="cv-date">4/16</span>
+          </h3>
+          <p>USF Undergraduate Research Colloquium</p>
+        </div>
+
+        <div class="cv-item">
+          <h3>
+            <span>Applied Predictive Electro-Ballistics <i>(Award-Winning)</i></span>
+            <span class="cv-date">11/15</span>
+          </h3>
+          <p>USF College of Engineering, Research Day</p>
+        </div>
+
+      </section>
+
+      <section id="employment">
+        <h2>
+          <span>Employment History</span>
+          <span class="date-label">Dates</span>
+        </h2>
+        
+        <div class="cv-item">
+          <h3>
+            <span>Graduate Assistant (partial fellowship)</span>
+            <span class="cv-date">8/19-8/26</span>
+          </h3>
+          <p>Pennsylvania State University, Department of Physics</p>
+        </div>
+
+        <div class="cv-item">
+          <h3>
+            <span>Adjunct Physics Course Instructor (Intro Electricity &amp; Magnetism)</span>
+            <span class="cv-date">7/19-8/19</span>
+          </h3>
+          <p>Washington University in St. Louis, University College</p>
+        </div>
+
+        <div class="cv-item">
+          <h3>
+            <span>Peer-Led Team Learning (PLTL) Coordinator</span>
+            <span class="cv-date">5/18-7/19</span>
+          </h3>
+          <p>Washington University in St. Louis, Department of Physics</p>
+        </div>
+
+        <div class="cv-item">
+          <h3>
+            <span>Faculty Assistant</span>
+            <span class="cv-date">1/18-5/18</span>
+          </h3>
+          <p>Washington University in St. Louis, Department of Physics</p>
+        </div>
+
+        <div class="cv-item">
+          <h3>
+            <span>Math Instructor</span>
+            <span class="cv-date">10/14-3/15</span>
+          </h3>
+          <p>Mathnasium of South Tampa</p>
+        </div>
+
+      </section>
+
+      <section id="awards">
+        <h2>
+          <span>Awards &amp; Advanced Wordshops</span>
+          <span class="date-label">Dates</span>
+        </h2>
+        
+        <div class="cv-item">
+          <h3>
+            <span>Graduate Excellence in Teaching Award</span>
+            <span class="cv-date">5/24</span>
+          </h3>
+          <p>Penn State, Department of Physics</p>
+        </div>
+
+        <div class="cv-item">
+          <h3>
+            <span>Nellie H. and Oscar L. Roberts Scholarship</span>
+            <span class="cv-date">6/20</span>
+          </h3>
+          <p>Penn State, Eberly College of Science</p>
+        </div>
+
+        <div class="cv-item">
+          <h3>
+            <span>Dean's Distinguished Graduate Scholarship</span>
+            <span class="cv-date">8/19</span>
+          </h3>
+          <p>Penn State, Eberly College of Science</p>
+        </div>
+
+        <div class="cv-item">
+          <h3>
+            <span>Verne M. Willaman Distinguished Graduate Fellowship</span>
+            <span class="cv-date">8/19</span>
+          </h3>
+          <p>Penn State, Fox Graduate School</p>
+        </div>
+
+        <div class="cv-item">
+          <h3>
+            <span>Summer School on Mathematical General Relativity and the Geometric Analysis of Waves of Fluids</span>
+            <span class="cv-date">6/18</span>
+          </h3>
+          <p>Boston City Limits, Massachusetts Institute of Technology</p>
+        </div>
+
+        <div class="cv-item">
+          <h3>
+            <span>Mathematics Research Communities: The Mathematics of Gravity and Light</span>
+            <span class="cv-date">6/18</span>
+          </h3>
+          <p>American Mathematical Society, Whispering Pines Conference Center</p>
+        </div>
+
+        <div class="cv-item">
+          <h3>
+            <span>Summer School on Spectral Theory and Applications</i></span>
+            <span class="cv-date">7/16</span>
+          </h3>
+          <p>Centre de Recherches Mathematiques, University Laval</p>
+        </div>
+
+      </section>
+
+    </div>
+
 
   </div>
+  <script src="layout.js"></script>
 </body>
 </html>

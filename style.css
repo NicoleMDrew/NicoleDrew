@@ -1,51 +1,53 @@
-/* Base Layout & Typography */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* This makes the block static */
-.static-block {
-    position: static; /* Default positioning */
-    background-color: lightblue;
-    padding: 20px;
-    border: 2px solid #333;
-    width: 300px;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-  color: #222222;
-  background-color: #fafafa;
-  padding: 2rem 1rem;
+    margin: 0;
 }
 
-/* Centered Container with Max-Width */
+body {
+  font-family: 'Source Sans 3', sans-serif; /* Clean sans-serif for body/nav */
+}
+
+h1, h2, h3 {
+  font-family: 'Source Serif 4', serif;     /* Matching serif for section headers */
+}
+
+/* Code tags and pre blocks */
+code, pre, kbd, samp {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.9em; /* Slightly smaller than regular body text for visual balance */
+}
+
+/* Layout Wrapper */
 .container {
-  max-width: 680px;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  min-height: 100vh;
+  max-width: 100%; /* Overrides 680px restriction */
 }
 
-/* Typography Hierarchy */
-h1 {
-  font-size: 2rem;
+/* Main Page Headings */
+h1, h2, h3 {
+  color: #262125;
   font-weight: 600;
-  color: #111111;
-  margin-bottom: 0.2rem;
+}
+
+h1 {
+  font-size: 1.3rem;
+  margin-bottom: 0rem;
 }
 
 .subtitle {
-  font-size: 1.1rem;
-  color: #666666;
+  font-size: 1.0rem;
   margin-bottom: 2rem;
+  margin-top: 0;
 }
 
 h2 {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  color: #333333;
   margin-top: 2.5rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid #e5e5e5;
@@ -54,43 +56,78 @@ h2 {
 
 p {
   margin-bottom: 1rem;
-  color: #333333;
 }
 
-/* Links */
-a {
-  color: #0056b3;
-  text-decoration: none;
+/* Scrollable right main content */
+.right-content {
+  padding: 1.0rem 15%;
+  box-sizing: border-box;
+  overflow-y: auto;
+  line-height: 1.25;
 }
 
-a:hover {
+/* Tightens wrapped line spacing for paragraphs in the right content panel */
+.right-content p {
+  line-height: 1.25;     /* Tightens wrapped text within a single paragraph */
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+/* In-Text Content Links (Right Panel) */
+.right-content a {
+  color: #5c3d52;
+  transition: color 0.2s ease;
+}
+
+.right-content a:hover {
+  color: #3b2233;
   text-decoration: underline;
 }
 
-/* Connect Links List */
-#links ul {
-  list-style: none;
+.link-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  transform: translateY(0.25rem);
+  margin-left: 0.1rem;
+  filter: invert(41%) sepia(8%) saturate(468%) hue-rotate(267deg) brightness(91%) contrast(88%);
 }
 
-#links li {
-  display: inline;
-  margin-right: 1.2rem;
+/* Align section title (left) and label (right) on the same line */
+.right-content h2 {
+  display: flex;
+  justify-content: space-between; /* Pushes title left, label right */
+  align-items: baseline;
+  border-bottom: 1px solid #d8d2d6;
+  padding-bottom: 0.3rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+section {
+  margin-bottom: 3rem;
 }
 
 /* Project Items */
 .project-item {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0rem;
 }
 
 .project-item h3 {
   font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0;
 }
 
-/* Footer */
-footer {
-  margin-top: 4rem;
-  font-size: 0.85rem;
-  color: #888888;
+
+/* Subtitles, Dates, & Captions */
+.subtitle, 
+.project-date, 
+footer p {
+  color: #655e63;
+}
+
+/* Body Copy (Paragraphs & Lists) */
+body, p, li {
+  color: #343133;
+  line-height: 1.6;
 }

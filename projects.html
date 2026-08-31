@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicole Drew, Computational and Theoretical Physicist - Projects</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style_proj.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body class="page-proj">
+  <div class="container">
+    
+    <div class="left-fixed" id="leftPanel"></div>
+
+    <div class="right-content">
+
+        <h3><span style="color: red;">This page is under construction!</span></h3>
+
+        <section id="projects">
+        <h2><span>Featured Projects</span></h2>
+
+        <article class="project-card reverse">
+            <div class="project-media">
+                <a href="assets/mes-existence-proof.png" target="_blank">
+                <img src="assets/Manifold.png" alt="Mathematical schematic of topological minimum energy surface" class="project-img">
+                </a>
+                <p class="caption">Figure 1: Mathematical schematic of topological minimum energy surface.</p>
+            </div>
+            <div class="project-info">
+                <h3>Existence &amp; Uniqueness of Minimum Energy Surfaces</h3>
+                <p>
+                While zero-dimensional transition states and one-dimensional Minimum Energy Pathways (MEPs) are well-established in chemical dynamics, higher-dimensional energy surfaces lack rigorous mathematical foundations. This research establishes the first formal existence and uniqueness proof for two-dimensional minimum energy surfaces across multi-dimensional potential energy landscapes. By framing the problem through geometric analysis and variational principles, we demonstrate that two-dimensional minimal surfaces subject to specified boundary conditions are well-posed, providing a mathematically sound framework for multi-dimensional reaction coordinate reductions.
+                </p>
+                <ul class="tech-stack">
+                <li>Variational Calculus</li>
+                <li>Geometric Analysis</li>
+                <li>Differential Topology</li>
+                <li>Mathematical Physics</li>
+                </ul>
+            </div>
+            </article>
+
+        <article class="project-card">
+            <div class="project-media">
+            <img src="assets/Formaldehyde.png" alt="Nudged Elastic Membrane surface visualization" class="project-img">
+            <p class="caption">Figure 2: Minimum energy surface triplet formaldehyde obtained via NEMpy.</p>
+            </div>
+            <div class="project-info">
+                <h3>Computational Algorithmic Frameworks (NEMpy)</h3>
+                <p>
+                Exploring high-dimensional potential energy surfaces often requires moving beyond one-dimensional reaction paths to capture complex, multi-pathway transition dynamics. Building upon our variational existence proofs, we derived and constructed the Nudged Elastic Membrane (NEM) algorithm—an extension of Nudged Elastic Band (NEB) methods using discretized two-dimensional finite elastic elements. Implemented in the open-source Python package <code>NEMpy</code>, this framework enables automated, robust discovery of minimum energy surfaces. The package interfaces seamlessly with electronic structure engines such as Quantum ESPRESSO, atomic simulation suites (ASE, PyMatGen), and machine learning potentials.
+                </p>
+                <ul class="tech-stack">
+                    <li>Python</li>
+                    <li>NumPy / SciPy</li>
+                    <li>Quantum ESPRESSO</li>
+                    <li>ASE &amp; PyMatGen</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="project-card reverse">
+            <div class="project-media">
+            <img src="assets/ConicProjection.png" alt="Euclideanization conic projection diagram" class="project-img">
+            <p class="caption">Figure 2: Conic projection of hyperbolic geometry.</p>
+            </div>
+            <div class="project-info">
+            <h3>Euclideanization of Minkowski Spacetime</h3>
+            <p>Evaluating path integrals in quantum field theory often requires transforming pseudo-Riemannian Minkowski metrics into positive-definite Euclidean spaces. Traditional approaches rely on Wick rotations, which introduce artificial complexifications of spacetime coordinates. In this work, we developed a novel geometric mapping that achieves Euclideanization without complexifying spacetime. By constructing a conic projection from the hyperbolic geometry of special relativity directly into real Euclidean space, this transformation preserves coordinate reality while significantly simplifying integral convergence calculations for quantum theoretical applications.
+            </p>
+            <ul class="tech-stack">
+                <li>Differential Geometry</li>
+                <li>Quantum Field Theory</li>
+                <li>Hyperbolic Geometry</li>
+                <li>Mathematical Physics</li>
+            </ul>
+            </div>
+        </article>
+        </section>
+
+    </div>
+
+  </div>
+  <script src="layout.js"></script>
+</body>

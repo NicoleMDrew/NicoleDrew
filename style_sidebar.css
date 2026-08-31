@@ -1,0 +1,162 @@
+/* Fixed Left Sidebar with Flex Layout */
+.left-fixed {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  background-color: #dfe5e2;
+  padding: 1rem; /* Equal vertical spacing top & bottom */
+  box-sizing: border-box;
+  box-shadow: 0.7rem 0 0.5rem #e5e5e5;
+  overflow-y: auto;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Headshot Container */
+.profile-avatar {
+  width: 70%; 
+  max-width: 12rem; 
+  margin: 0 auto 1rem; /* Centering trick: auto on left and right margins */
+}
+
+/* Fluid Headshot Styling */
+.profile-img {
+  width: 100%; 
+  height: auto; 
+  display: block;
+  border-radius: 5px; /* 50% for circle, or remove for square */
+  object-fit: cover;
+}
+
+/* Nav container - automatically centers vertically */
+.sidebar-nav {
+  margin-top: auto;    /* Pushes away from header */
+  margin-bottom: auto; /* Pushes away from footer */
+}
+
+/* Hide all page-specific links by default */
+.page-only {
+  display: none;
+}
+
+/* Show home-only links when body has class "page-home" */
+body.page-home .home-only {
+  display: block;
+}
+
+/* Show CV-only links when body has class "page-cv" */
+body.page-cv .cv-only {
+  display: block;
+}
+
+/* Bold font weight and opaque color for active navigation links */
+body.page-home .sidebar-nav a.nav-home,
+body.page-cv .sidebar-nav a.nav-cv,
+body.page-proj .sidebar-nav a.nav-proj {
+  font-weight: 700;       /* Makes text bold */
+  color: #2e2129;         /* Slightly darker/richer plum for contrast */
+  opacity: 1;
+}
+
+/* Optional: Keep the active icon fully opaque */
+body.page-home .sidebar-nav a.nav-home .nav-icon,
+body.page-cv .sidebar-nav a.nav-cv .nav-icon,
+body.page-proj .sidebar-nav a.nav-proj .nav-icon {
+  filter: invert(15%) sepia(20%) saturate(1800%) hue-rotate(264deg) brightness(85%) contrast(95%);
+}
+
+/* Base spacing for main navigation items */
+.sidebar-nav li {
+  margin-top: 0.75rem;
+}
+
+/* Tighten spacing & indent whenever a page-only link is active/visible */
+.sidebar-nav li.page-only {
+  margin-top: -0.35rem;   /* Pulls item up closer to the main page link */
+  margin-bottom: 0.25rem; /* Keeps tight spacing above the next main link */
+  padding-left: 1.25rem;  /* Indents sub-links for visual hierarchy */
+}
+
+/* Optional scale tweak for sub-links */
+.sidebar-nav li.page-only a {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* Navigation list resets */
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Sidebar Nav Links */
+.sidebar-nav a {
+  display: inline-flex;  /* Treats icon + text as a flex row */
+  align-items: center;    /* Vertically centers icon and text on their midpoints */
+  gap: 0.6rem;           /* Controls exact horizontal spacing between icon and text */
+  color: #4a3843;        /* Deep Plum */
+  text-decoration: none;
+  font-size: 1rem;       /* ~16px */
+  font-weight: 500;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.sidebar-nav .nav-icon {
+  width: 1.2rem;         /* ~19px - slightly larger than 1rem text for visual balance */
+  height: 1.2rem;
+  flex-shrink: 0;        /* Prevents the SVG from shrinking on narrow screens */
+  fill: currentColor;    /* Inherits #4a3843 link color and hover states */
+  vertical-align: middle;
+  margin-right: 0.1rem;
+  /* Filter generated specifically for #4a3843 */
+  filter: invert(24%) sepia(11%) saturate(1450%) hue-rotate(264deg) brightness(95%) contrast(91%);
+}
+
+.sidebar-nav a:hover{
+  opacity: 0.7;
+  transform: translateY(-2px);
+}
+
+/* Pushes footer to the bottom of the viewport container */
+.left-fixed footer {
+  margin-top: auto;
+  font-size: 0.85rem;
+  color: #555555;
+}
+
+.left-fixed footer #links {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+
+/* Remove default paragraph margins in footer to maintain exact padding */
+.left-fixed footer p {
+  margin: 0;
+}
+
+/* Social Icon Container */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+/* Target social icon images */
+.social-icons .icon-img {
+  width: 22px;
+  height: 22px;
+  /* Converts SVG color to match #655e63 (Muted Plum-Gray) */
+  filter: invert(41%) sepia(8%) saturate(468%) hue-rotate(267deg) brightness(91%) contrast(88%);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover .icon-img {
+  opacity: 0.7;
+  transform: translateY(-2px);
+}

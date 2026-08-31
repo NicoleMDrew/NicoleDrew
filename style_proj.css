@@ -1,0 +1,67 @@
+/* Project Card Container */
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Equal split for image and text */
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 3.5rem;
+}
+
+/* Reverse layout for alternating rows */
+.project-card.reverse {
+  direction: rtl; /* Flips the column order */
+}
+
+.project-card.reverse .project-info,
+.project-card.reverse .project-media {
+  direction: ltr; /* Resets text direction inside the elements back to normal */
+}
+
+/* Image & Caption Styling */
+.project-media {
+  width: 100%;
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid #d8d2d6; /* Matches your right-content borders */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: block;
+}
+
+.caption {
+  font-size: 0.85rem;
+  color: #655e63;
+  margin-top: 0.4rem;
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+/* Tech Stack Pills (Optional Accent) */
+.tech-stack {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.tech-stack li {
+  font-size: 0.8rem;
+  background-color: #dfe5e2; /* Soft Olive accent */
+  color: #262125;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .project-card, 
+  .project-card.reverse {
+    grid-template-columns: 1fr; /* Stacks image and text vertically on small screens */
+    direction: ltr;
+    gap: 1rem;
+  }
+}

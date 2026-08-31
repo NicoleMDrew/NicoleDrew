@@ -3,62 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nicole Drew, Computational and Theoretical Physicist - Homepage</title>
+  <title>Nicole Drew, Computational & Theoretical Physicist - Homepage</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="page-home">
   <div class="container">
     
-    <header>
-      <h1>Nicole Drew, Ph.D.</h1>
-      <p class="subtitle">Computational and Theoretical Physicist</p>
-    </header>
+    <div class="left-fixed" id="leftPanel"></div>
 
-    <section id="about">
-      <p>
-        <a href="CV.html" target="_blank">Curriculum Vita</a>
-      </p>
-    </section>
+    <div class="right-content">
+      <section id="about">
+        <h2><span>About</span></h2>
+        <p>
+          I am a computational and theoretical physicist specializing in the intersection of geometry, multidimensional optimization, and first-principles electronic structure modeling. I recently completed my Ph.D. in Physics at Pennsylvania State University, where my doctoral research centered on formulating mathematical frameworks and developing scalable algorithms to solve complex energy surface problems.
+        </p>
+        <p>
+          Most recently, I derived and developed <code>NEMpy</code>, an open-source Python package that extends Nudged Elastic Band (NEB) methods into multi-dimensional Nudged Elastic Membrane (NEM) algorithms. By integrating <code>NEMpy</code> with density functional theory (DFT) engines such as Quantum ESPRESSO and modern machine learning potentials, my research enables automated mapping of adsorbate interactions and minimum energy pathways across complex material interfaces.
+        </p>
+        <p>
+          Beyond computational algorithm development, my background includes extensive research across quasi-classical models of quantum dynamics, gravitational lensing, and autonomous robotics. I am passionate about constructing robust, open-source numerical tools that leverage modern computational frameworks (such as <code>NumPy</code>, <code>pandas</code>, <code>ASE</code>, and <code>PyMatGen</code>) to accelerate the discovery and optimization of advanced functional materials.
+        </p>
+      </section>
 
-    <section id="links">
-      <h2>Connect</h2>
-      <ul>
-        <li><a href="https://github.com/NicoleMDrew" target="_blank">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/nicolemariedrew/" target="_blank">LinkedIn</a></li>
-        <li><a href="mailto:nicoledrew693@gmail.com">Email</a></li>
-      </ul>
-    </section>
-
-    <section id="projects">
-      <h2>Selected Projects</h2>
-      
-      <div class="project-item">
-        <h3>Nudged Elastic Membranes</h3>
-        <p>A brief description of your project, key techniques used, or findings.</p>
-      </div>
-
-      <div class="project-item">
-        <h3>Project Title 2</h3>
-        <p>A brief description of another project or publication link.</p>
-      </div>
-    </section>
-
-    <!--
-      <div class="gallery-container">  
-        <div class="gallery">    
-          <img src="ConicProjection.png" alt="Euclideanization of Minkowski Spacetime" class="gallery-item">    
-          <img src="image2.jpg" alt="Image 2" class="gallery-item">    
-          <img src="image3.jpg" alt="Image 3" class="gallery-item">    
-        </div>  
-        <button class="nav-btn prev-btn">Prev</button>  
-        <button class="nav-btn next-btn">Next</button> 
-      </div>
-   -->
-
-    <footer>
-      <p>&copy; 2026 Nicole Drew</p>
-    </footer>
+    </div>
 
   </div>
+  <script src="layout.js"></script>
 </body>
 </html>
